@@ -1,0 +1,67 @@
+Q =>1   Difference between “ == “ and “ === “ operators.
+Ans =>  These are the comparision oprator they always return boolean value like true and false
+== it compare the value
+=== it also compare the value and type of data as well  if you want to find the datatype of any value you need to use type of oprator
+
+Q =>2  What is the spread operator?
+Ans   The spread oprator is used to expand or spread an itrable or an array
+
+const arrValue = ['My', 'name', 'is', 'Jack'];
+
+console.log(arrValue);    ["My", "name", "is", "Jack"]
+console.log(...arrValue);  My name is Jack
+
+The spread oprator is also use copy and clone of an array
+The sparead oprate looks like ...
+
+const arr1 = ['one', 'two'];
+const arr2 = [...arr1, 'three', 'four', 'five'];
+console.log(arr2);   
+Output:
+ ["one", "two", "three", "four", "five"]
+
+ Q =>3  	What are the differences between var, let and const?
+ Ans   These are the three diffrent way to declare or creating the variable in js
+ out of these three var used to be a part of Es5 or ECMAScript2014 and let and const are te part of latest release of js version Es6
+
+ Diffrence are:
+ var is a global scope variable
+ let and const are local scope variable
+
+ At the time of memory allocation they will get their memory also at diffrent location meance
+ var will be in global and let and const will be in script scope according to the browser resulting in that if you will try to access var
+ keyword variable before initialization you will get undefine
+ but if you will try to access variable created using let and const it will throw ref error
+
+ Q =>4 	What is execution context
+ Ans  
+
+ Q =>5 What is meant by first class functions
+  Ans  in such a language, a function can be passed as an argument to other functions, can be returned by another function and can be assigned as a value to a variable.
+
+  function sayHello() {
+    return "Hello, ";
+ }
+ function greeting(helloMessage, name) {
+    console.log(helloMessage() + name);
+
+    greeting(sayHello, "JavaScript!");
+
+    Q =>6 What are closures?
+    Ans A closure is the combination of function and bundled with refrence to its lexical environment
+    in closure  a closure give you access to an outer function's scope from an inner function
+    
+    function outer() {
+        var num = 5;
+        fucntion inner() {
+            console.log(num)
+        }
+        return inner;
+    }
+    outer()();
+
+    Q =>7 	Explain call(), apply() and, bind() methods.
+
+    Call invokes the function and allows you to pass in arguments one by one. 
+    2:>) Apply invokes the function and allows you to pass in arguments as an array.
+    : 3) Bind returns a new function, allowing you to pass in a this array and any number of arguments
